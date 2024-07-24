@@ -1,0 +1,1 @@
+GEN_CSRCS += _2_alpha_200x200.c

@@ -258,6 +258,7 @@
 "usart1\fft.o"
 "usart1\gd.o"
 "usart1\fmam_gen.o"
+"usart1\ad9959.o"
 --strict --scatter "USART1\USART1.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

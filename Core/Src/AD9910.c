@@ -212,7 +212,7 @@ void AD9910_Init(void)
 
 void AD9910WriteByte(uint8_t Data)
 {
-	HAL_SPI_Transmit_DMA(&hspi2, &Data, 1);//发送数据
+	HAL_SPI_Transmit_DMA(&hspi1, &Data, 1);//发送数据
 }
 
 /**
@@ -231,8 +231,8 @@ void AD9910WtiteDatas(uint8_t Address, uint8_t* Data, uint16_t Length)
 	AD9910_CSB_0();
 	
 	//AD9910WriteByte(Address);
-	HAL_SPI_Transmit_DMA(&hspi2, &Address, 1);
-	HAL_SPI_Transmit_DMA(&hspi2, Data, Length);
+	HAL_SPI_Transmit_DMA(&hspi1, &Address, 1);
+	HAL_SPI_Transmit_DMA(&hspi1, Data, Length);
 //	for(i=0;i<Length;i++)
 //	{
 //		AD9910WriteByte(Data[i]);
@@ -328,7 +328,6 @@ void AD9910_ModType_Cfig(RAM_Mod_Type RAM_Mod_Data, DRG_Mod_Type DRG_Mod_Data, O
 	AD9910WtiteDatas(0x01, Data, 4);
 	
 }
-
 /**
   * @brief  Write amplitude, phase and frequency word to AD9910 profile register X.
   * @param  amplitude: Can be 0~1.
@@ -337,7 +336,7 @@ void AD9910_ModType_Cfig(RAM_Mod_Type RAM_Mod_Data, DRG_Mod_Type DRG_Mod_Data, O
   *
   * @retval None
   */
-void AD9910_Amp_Pha_Freq_Set(float amplitude, float phase, float frequency, uint16_t Profile_NUM)
+void AD9910_Amp_Pha_Freq_Set_sig(float amplitude, float phase, float frequency, uint16_t Profile_NUM)
 {
 	uint16_t amplitude_scale_factor;
 	uint16_t phase_offset_word;
@@ -362,6 +361,12 @@ void AD9910_Amp_Pha_Freq_Set(float amplitude, float phase, float frequency, uint
 	
 }
 
+void AD9910_Amp_Pha_Freq_Set(float amplitude, float phase, float frequency, uint16_t Profile_NUM)
+{
+	AD9910_Amp_Pha_Freq_Set_sig(amplitude,phase, frequency, Profile_NUM);
+	AD9910_Amp_Pha_Freq_Set_sig(amplitude,phase, frequency, Profile_NUM);
+	
+}
 
 /**
   * @brief  Config RAM parameters.

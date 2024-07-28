@@ -134,6 +134,9 @@ void app_init()
 {
 	//init_relay();
 	//AD9910_Init();
+		//Init_AD9959();
+	
+	//AD9910_Amp_Pha_Freq_Set(1.0, 0.0, 100*KHz,0 );
 //	si5351_Init();
 //	si5351_setupPLL(SI5351_PLL_B, 31, 498915, 500035);
 //	si5351_setupMultisynth(2, SI5351_PLL_B, 16, 0, 1);
@@ -148,12 +151,22 @@ void app_init()
 	setup_ui(&guider_ui);
 	events_init(&guider_ui);
 
-
 	printf("LCD ID:%x\r\n", lcddev.id);
+	//AD9959_Sweep_Frequency(3, 1, 50000000, 1, 255, 0);
+	//AD9959_SET_2FSK(3,10*KHz,20*KHz);
+//	AD9959_Write_Frequence(3,50*KHz);
+//	AD9959_Write_Amplitude(3,511);
+//	AD9959_Write_Phase(3,0);
+//	
+//	AD9959_Write_Frequence(2,50*KHz);
+//	AD9959_Write_Amplitude(2,511);
+//	AD9959_Write_Phase(2,90);
+//AD9959_Set_Amplitude_Phase_Frequence(3,511, 0,10*KHz);
 
 }
 
 void app_main_loop()
 {
 	lv_task_handler();
+	
 }

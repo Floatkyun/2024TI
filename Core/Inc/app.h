@@ -13,6 +13,7 @@
 #include "gpio.h"
 #include "dac.h"
 #include "AD9910.H"
+#include "ad9959.h"
 #include "fft.h"
 #include "fpga_spi.h"
 #include "gd.h"

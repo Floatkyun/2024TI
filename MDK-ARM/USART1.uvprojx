@@ -3675,6 +3675,21 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>AD9959</GroupName>
+          <Files>
+            <File>
+              <FileName>ad9959.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\ad9959.h</FilePath>
+            </File>
+            <File>
+              <FileName>ad9959.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\ad9959.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>

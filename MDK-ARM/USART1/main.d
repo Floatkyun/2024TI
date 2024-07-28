@@ -269,8 +269,9 @@ usart1/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\LVGL\LVGL_SRC\lvgl\examples\porting\lv_port_disp.h \
   ..\LVGL\LVGL_SRC\lvgl\examples\porting\lv_port_indev.h \
   ..\LVGL\generated\gui_guider.h ..\LVGL\generated\events_init.h \
-  ..\Core\Inc\AD9910.H ..\Core\Inc\fft.h ..\Core\Inc\si5351.h \
-  ..\Core\Inc\si5351_errors.h ..\Core\Inc\si5351_asserts.h \
+  ..\Core\Inc\AD9910.H ..\Core\Inc\ad9959.h ..\Core\Inc\fft.h \
+  ..\Core\Inc\si5351.h ..\Core\Inc\si5351_errors.h \
+  ..\Core\Inc\si5351_asserts.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
   ..\Drivers\CMSIS\DSP\Include\arm_math.h \
   ..\Drivers\CMSIS\DSP\Include\arm_const_structs.h \
